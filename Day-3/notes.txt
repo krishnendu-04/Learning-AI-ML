@@ -1,0 +1,105 @@
+PANDAS
+
+    Introduction to Pandas Data Structures
+        • Pandas Data Structures
+            • Series
+            • DataFrame
+
+    Loading Data from CSV, Excel, and Other Sources
+        • Common Data Loading Methods
+            • From CSV
+            • From Excel
+            • From a Dictionary
+        • Saving Data
+            • Save to CSV
+            • Save to Excel
+
+    Basic DataFrame Operations
+        • Viewing Data
+        • Selecting and Indexing
+            • Selecting columns
+            • Filtering rows
+            • Selecting by position
+            • Selecting by label
+
+    
+DATA CLEANING & PREPARATION
+
+    Handling Missing Values
+        • Methods to Handle Missing Values
+            • Drop Missing Values
+            • Fill Missing Values
+            • Interpolation
+
+    Data Transformations
+        • Renaming Columns
+        • Changing Data Types
+        • Creating or Modifying Columns
+
+    Combining and Merging DataFrames
+        • Concatenation
+        • Merging
+        • Joining
+
+
+DATA AGGREGATION & GROUPING
+
+    Grouping Data by Categories
+        • groupby in Pandas
+            • Operations
+                • Iterate over groups
+                • Apply aggregation
+
+    Aggregation Functions
+        • Using groupby
+        • Using pivot_table
+        • Custom Aggregation
+            • Apply custom functions using .agg()
+
+    Calculating Summary Statistics for Grouped Data
+        • Common Statistics
+            • Mean
+            • Max
+            • Min
+        • Multi-Aggregation
+
+    
+DATA VISUALIZATION WITH MATPLOTLIB & SEABORN
+
+    Basic Plots
+        • Line Plot
+        • Bar Chart
+        • Histogram
+        • Scatter Plot
+
+    Customizing Plots
+        • Add titles, axis labels, and legends
+        • Adjust colors and styles
+
+    Introduction to Seaborn for Advanced Visualizations
+        • Common Seaborn Plots
+            • Heatmap
+            • Pairplot
+    
+EDA
+
+    Applying Data Manipulation and Visualization for EDA
+        • Steps in EDA
+            • Data Cleaning
+            • Data Transformation
+            • Aggregation and Filtering
+
+    Identifying Patterns, Trends, and Correlations
+        • Visual Tools for Insights:
+            • Line plots for trends over time
+            • Bar charts for categorical comparisons
+            • Scatter plots for relationships
+            • Heatmaps for correlation analysis
+        • Key Patterns to Look For:
+            • Relationships between variables (correlations)
+            • Distribution of variables (histograms, boxplots)
+            • Outliers or anomalies
+
+    Summary Statistics, Visual Insights, and Hypothesis Generation
+        • Summary Statistics
+        • Hypothesis Generation
