@@ -1,0 +1,125 @@
+CALCULUS FOR ML
+
+    Understanding Integrals and their Applications in ML
+        • Compute the area under a curve, representing accumulation
+        • The definite integral of 𝑓 ( 𝑥 ) from 𝑎 to 𝑏:
+                integral a to b f(x) dx
+        • Applications in ML
+            • Probability Distributions
+            • Cost Functions
+
+    Optimization Concepts
+        • Local vs. Global Minima
+            • Local Minimum
+            • Global Minimum
+        • Convex Functions
+            • f (λx1 + (1 − λ) x2) ≤ λf(x1) + (1 − λ) f(x2) for all λ ∈ [0, 1]
+            • Ensure that any local minimum is also a global minimum
+        • Non-Convex Functions in ML
+            most neural network loss functions
+
+
+    Stochastic Gradient Descent (SGD) and Its Variants
+        • Optimization algorithm that uses random subsets (mini-batches) of the data to compute gradients and update parameters
+        • Variants of SGD
+            • Mini-Batch SGD
+            • Momentum
+            • Adam Optimizer
+
+PROBABILITY THEORY & DISTRIBUTIONS
+
+    Probability Basics
+        • Conditional Probability
+            • The probability of an event 𝐴 given that event 𝐵 has occurred
+                    P(A|B) = P(A intersection B)/P(B)
+        • Bayes’ Theorem
+            P(A|B) = (P(B|A)P(A))/P(B)
+                • P( 𝐴 ) Prior probability
+                • 𝑃 ( 𝐵 ∣ 𝐴 ) Likelihood
+                • 𝑃 ( 𝐵 ) Evidence
+
+    Common Probability Distributions
+        • Gaussian (Normal) Distribution
+            • Bell-shaped curve with mean (𝜇) and standard deviation (𝜎)
+                f(x) = (1 . e^(-(x-mu)^2/2sigma^2))/rootof(2pisigma^2)
+        • Bernoulli Distribution
+            • Describes outcomes of a binary experiment
+                P(X=1) = p, P(X = 0) = 1 - p
+
+    Common Probability Distributions
+        • Binomial Distribution
+            • Models the number of successes in 𝑛 independent Bernoulli trials
+                P( X = k ) = (n k)p^k(1 - p)^ n-k
+        • Poisson Distribution
+            • Models the number of events in a fixed interval of time or space
+                P (X = k) = (lambda^k e^-lambda)/k!
+
+    Applications in Machine Learning
+        • Gaussian Distribution
+            • Used in Gaussian Naive Bayes and kernel density estimation
+        • Bernoulli Distribution
+            • Models binary classification problems
+        • Binomial Distribution
+            • Used in logistic regression to model binary outcomes.
+        • Poisson Distribution
+            • Models count data
+
+STATISTICS FUNDAMENTAL
+
+    Measures of Central Tendency and Dispersion
+        • Central Tendency
+            • Mean: The average value of a dataset
+            • Median: The middle value when data is sorted
+            • Mode: The most frequently occurring value
+        • Dispersion
+            • Variance: The average squared deviation from the mean
+            • Standard Deviation: The square root of variance, indicating the spread of data. python Copy code
+
+    Hypothesis Testing
+        • Steps
+            • Formulate Hypotheses
+                • Null Hypothesis
+                • Alternative Hypothesis
+            • Calculate Test Statistic
+            • Determine P-Value
+            • Interpret Results
+
+    Confidence Intervals and Statistical Significance
+        • Confidence Interval
+        • Range of values within which the true population parameter is expected to lie
+                CI = xbar + or - z.(s/rootn)
+                    •x: Sample mean
+                    • 𝑧: Z-score
+                    • 𝑠: Standard deviation
+
+Math-Driven Mini Project Linear Regression from Scratch
+
+    Applying Linear Algebra, Calculus, and Statistics
+        • Linear Algebra
+            • Mathematical Model: y^ = X * 𝜃
+                X: Feature matrix (with bias term) | 𝜃: Parameters (weights and bias) | 𝑦^: Predicted values. 
+
+        • Calculus
+            • Optimization of 𝜃 involves minimizing the loss function:
+                J(𝜃) = (1/2m) Sigma i=1 to m (yi^ - yi)^2
+                Gradient of J(𝜃) = (1/m) X^T (X.𝜃 - y)
+
+        • Statistics
+            • Metrics like Mean Squared Error (MSE) and 𝑅2 are used to evaluate model performance
+
+    Using Gradient Descent for Parameter Optimization
+        • Gradient Descent Algorithm
+            • Iteratively update 𝜃 using θ := θ − α⋅∇J , α: Learning rate
+        • Key Steps
+            • Initialize parameters (𝜃)
+            • Compute gradients (∇𝐽)
+            • Update parameters using the gradient descent rule
+
+    Evaluating the Model Using Statistical Metrics
+        • Mean Squared Error (MSE)
+                MSE = (1/m)sigma i=1 to m (yi^ - yi)^2
+                • Measures the average squared error
+        
+        • R-squared (𝑅2)
+                R^2 = 1 - SSres/SStot
+                • Measures how well the regression line explains the variance in the data

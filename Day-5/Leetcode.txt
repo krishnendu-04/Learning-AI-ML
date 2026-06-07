@@ -1,0 +1,3 @@
+Valid Parentheses https://leetcode.com/problems/valid-parentheses/description/
+Next Greater Element 1 https://leetcode.com/problems/next-greater-element-i/description/
+Remove Outermost Parentheses https://leetcode.com/problems/remove-outermost-parentheses/description/
