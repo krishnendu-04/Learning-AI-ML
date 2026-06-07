@@ -1,0 +1,246 @@
+PROBABILITY THEORY & RANDOM VARIABLES
+
+    Basic Probability Concepts
+        • Sample Space and Events
+            • Sample Space: The set of all possible outcomes of a random experiment
+            • Events: A subset of the sample space
+        • Conditional Probability
+            • The probability of an event 𝐴 occurring, given that 𝐵 has occurred
+        • Independence
+            • Two events 𝐴 and 𝐵 are independent if
+                • P(A∩B) = P(A) ⋅ P(B)
+        
+    Random Variables
+        • Maps outcomes of a random experiment to numerical values
+        • Types: Discrete | Continuous
+        • Probability Mass Function (PMF)
+            • Probability distribution of a discrete random variable
+        • Probability Density Function (PDF)
+            • Probability distribution of a continuous random variable
+
+    Expectation, Variance, and Standard Deviation
+        • Expectation (𝐸 [𝑋])
+            • Weighted average of a random variable’s possible values
+                E[X] = sigma(x) x.P(X = x) --- Discrete
+                E[X] = integral -inf to inf x.f(x)dx  --- Continuous
+
+        • Variance (𝑉𝑎𝑟[𝑋])
+            • Measures the spread of a random variable
+                Var[X] = E[( X - E[X])^2 ]
+
+        • Standard Deviation (𝜎𝑋)
+            • Square root of variance:
+                𝜎𝑋 = rootof(Var[X])
+
+
+PROBABILITY DISTRIBUTIONS IN ML
+
+    Common Probability Distributions
+        • Gaussian (Normal) Distribution
+            • Bell-shaped curve characterized by mean (𝜇) and standard deviation (𝜎)
+            • Probability Density Function (PDF)
+                f(x) = 1e^-((x-𝜇)^2)/2𝜎^2
+            • Properties
+                • Symmetric about the mean
+                • Mean, median, and mode are the same
+            • Application in ML
+                • Common assumption in many algorithms (e.g., Naive Bayes)
+                • Used in feature scaling (e.g., standardization)
+            
+        • Binomial Distribution
+            • Models the number of successes in 𝑛 n independent Bernoulli trials
+            • Probability Mass Function (PMF)
+                P(X = k) = (n)p^k (1-p)^(n-k)
+                           (k)
+
+            • Properties
+                • Discrete distribution
+                • Parameters: 𝑛(number of trials), 𝑝(probability of success)
+            • Application in ML
+                • Logistic regression assumes a binomial distribution for binary classification
+
+        • Poisson Distribution
+            • Models the number of events in a fixed interval
+            • Probability Mass Function (PMF)
+                    P(X=k) = ((lambda^k)(e^-lambda))/k!
+
+            • Properties
+                • Discrete distribution
+                • Parameter: 𝜆 (average rate of occurrence)
+            • Application in ML
+                • Used in event modeling
+
+        • Uniform Distribution
+            • Equal probability for all outcomes in a range
+            • Probability Density Function (PDF)
+                    f(x) = 1/(b-a) , x belongs to [a,b]
+            • Properties
+                • Continuous distribution
+                • Parameters: 𝑎(lower bound), 𝑏(upper bound)
+            • Application in ML
+                • Random initialization of weights in neural networks
+
+    Application of Distributions in Machine Learning
+        • Gaussian Distribution
+            • Used in algorithms like Naive Bayes and Gaussian Mixture Models
+            • Assumed in statistical tests
+        • Binomial Distribution
+            • Foundational for logistic regression and other binary classification models
+        • Poisson Distribution
+            • Applied in modeling count data
+        • Uniform Distribution
+            • Commonly used in random sampling and initialization of parameters
+
+    Visualizing Distributions and Understanding Their Properties
+        • Visualization helps understand skewness, kurtosis, and outliers
+            • Skewness
+                • Measure of symmetry: Positive skew | Negative skew
+            • Kurtosis
+                • Measure of the "tailedness" of the distribution: High kurtosis | Low kurtosis
+    
+STATISTICAL INFERENCE -  ESTIMATION & CI
+
+    Introduction to Statistical Inference
+        • Process of making conclusions about a population based on sample data
+        • Population vs. Sample
+        • Goal
+            • Estimate population parameters and assess the reliability of these estimates
+
+    Point Estimation and Interval Estimation
+        • Point Estimation
+            • Single value estimate of a population parameter
+        • Interval Estimation
+            • Provides a range of values within which the population parameter is likely to lie
+            • Confidence Interval (CI):
+                    CI = (xˉ) +- (z.(s)/(rootof(n)))
+                    xˉ: Sample mean
+                    𝑧: Z-score corresponding to the confidence level
+                    𝑠:Sample standard deviation
+                    𝑛: Sample size
+
+    Constructing Confidence Intervals
+        • For Means
+            • When the population standard deviation (𝜎) is unknown
+                CI = xˉ +- t. s/rootof(n)
+                Use the t-distribution for small samples ( 𝑛 < 30 )
+
+        • For Proportions
+                CI = (p^) +- z. rootof((p^(1-p^))/n) , p^: Sample proportion
+
+HYPOTHESIS TESTING AND P-VALUES
+
+    Introduction to Hypothesis Testing
+        • Statistical method to determine if there is enough evidence in a sample to infer a conclusion about the population
+        • Key Components
+            • Null Hypothesis: Assumes no effect or no difference
+            • Alternative Hypothesis: Indicates an effect or difference
+        • Steps in Hypothesis Testing
+            • Formulate Null Hypothesis and Alternative Hypothesis
+            • Choose a significance level (𝛼) — common values are 0.05 or 0.01
+            • Calculate the test statistic
+            • Determine the p-value
+            • Compare the p-value to 𝛼:
+                • If 𝑝 ≤ 𝛼, reject Null Hypothesis | If 𝑝 > 𝛼 , fail to reject Null Hypothesis
+        
+    P-Values and Significance Levels
+        • P-Value
+            • The probability of observing results as extreme as the test statistic under Null Hypothesis
+            • Smaller p-values indicate stronger evidence against Null Hypothesis
+        • Significance Level (𝛼)
+            • Threshold for deciding whether to reject
+            • Example: 𝛼 = 0.05 means a 5% risk of rejecting Null Hypothesis when it is true
+        • Decision Rule
+            • Reject Null Hypothesis: 𝑝 ≤ 𝛼
+            • Fail to Reject Null Hypothesis: 𝑝 > 𝛼
+
+    Types of Errors
+        • Type I Error (𝛼)
+            • Incorrectly rejecting Null Hypothesis when it is true
+            • Example: Concluding a drug is effective when it is not
+        • Type II Error ( 𝛽 )
+            • Failing to reject Null Hypothesis when it is false
+            • Example: Concluding a drug is not effective when it is
+
+TYPES OF HYPOTHESIS TESTS
+
+    T-Tests
+        • Purpose: Test whether the means of one or more groups differ significantly
+        • Types
+            • One-Sample T-Test: Tests if the mean of a sample differs from a known value or population mean
+            • Two-Sample T-Test (Independent T-Test): Compares the means of two independent groups
+            • Paired Sample T-Test: Compares means of two related groups (e.g., pre-test vs. post-test)
+        • Example Use Cases
+            • One-Sample: Testing if the average test score of a class differs from the national average
+            • Two-Sample: Comparing test scores between two classes
+            • Paired Sample: Comparing weight before and after a diet program
+
+    Chi-Square Test
+        • Purpose: Test for independence or goodness-of-fit in categorical data
+        • Chi-Square Test of Independence: Tests if two categorical variables are independent
+        • Example Use Case: Testing if gender is independent of preference for a product
+        • Steps
+            • Create a contingency table
+            • Calculate expected frequencies
+            • Compute 𝜒2 statistic and p-value
+
+    ANOVA (Analysis of Variance)
+        • Purpose: Compare the means of three or more groups
+        • Hypotheses
+            • Null: All group means are equal
+            • Alternative: At least one group mean is different
+        • Example Use Case: Testing if the mean scores of students from three different schools differ
+
+
+CORRELATION AND REGRESSION ANALYSIS
+
+    Understanding Correlation
+        • Measures the strength and direction of the relationship between two variables
+        • Values range from − 1 to 1, with 0 indicating no correlation
+        • Types of Correlation
+            • Pearson Correlation Coefficient (𝑟)
+            • Spearman Correlation Coefficient (𝜌)
+
+    Linear Regression Basics
+        • Method to model the relationship between a dependent variable (𝑦) and one or more independent variables (𝑥)
+        • Formula for simple linear regression:
+            y = β0 + β1 x + ϵ
+            • β0 : Intercept
+            • β1 : Slope
+            • ϵ : Error term
+
+    Interpreting Regression Results
+        • Slope (𝛽1) - Indicates the magnitude and direction of the relationship
+        • Intercept (𝛽0) - Starting point of the regression line
+        • R-Squared (𝑅2) - Closer to 1 indicates better fit
+
+
+
+APPLICATION
+
+    • Apply
+        • Probability concepts to understand distributions
+        • Hypothesis testing to identify significant relationships or differences
+        • Regression analysis to explore and quantify relationships between variables
+
+    Performing Exploratory Data Analysis (EDA)
+        • Steps in EDA
+            1. Load and inspect the dataset
+            2. Check for missing or inconsistent data
+            3. Visualize distributions and relationships using histograms, scatter plots, and correlation heatmaps
+        • Key Goals
+            • Understand the data structure
+            • Identify patterns, trends, and outliers
+
+    Conducting Hypothesis Testing
+        • Steps
+            1. Formulate null and alternative hypotheses
+            2. Choose and perform an appropriate hypothesis test
+            3. Interpret p-values and test results
+        • Example: Comparing Tip Amounts by Gender
+
+    Applying Linear Regression
+        • Steps
+            1. Select dependent and independent variables
+            2. Fit a regression model to the data
+            3. Interpret coefficients and the 𝑅2 value
+        • Example: Analyzing Relationship Between Total Bill and Tip
