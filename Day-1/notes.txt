@@ -1,0 +1,142 @@
+
+CONTROL FLOW IN PYTHON
+
+    Conditional Statements
+        • Syntax:
+            • if: Executes code if a condition is True
+            • elif: Adds additional conditions after the initial if
+            • else: Executes code if none of the previous conditions are met
+
+    Loops
+        • for Loop
+            • Iterates over a sequence
+        • while Loop
+            • Executes as long as a condition is True
+
+    Using break and continue for Control Flow
+        • break
+            • Terminates the loop prematurely when a condition is met
+        • continue
+            • Skips the current iteration and proceeds to the next
+
+
+FUNCTIONS AND MODULES IN PYTHON
+
+    Scope and Lifetime of Variables
+        • Scope
+            • Local Scope
+            • Global Scope
+
+    Importing and Using Modules
+        • Importing Modules
+            • Import an entire module
+            • Import specific functions
+            • Use aliases
+        • Creating Custom Modules
+
+
+DATA STRUCTURES
+
+    Lists
+        • Creating Lists
+        • Accessing Elements
+            • Access by index
+            • Negative indexing
+        • Modifying Lists
+        • Slicing Lists
+
+    Tuples
+        • Creating Tuples
+        • Accessing Elements
+        • Immutability
+
+    Dictionaries
+        • Creating Dictionaries
+        • Accessing and Modifying Data
+            • Access
+            • Add or Update
+            • Remove
+        • Iteration
+
+    Sets
+        • Creating Sets
+        • Adding and Removing Elements
+        • Set Operations
+            • Union
+            • Intersection
+            • Difference
+
+WORKING WITH STRINGS
+
+    String Manipulation
+        • Concatenation
+        • Slicing
+        • Formatting
+
+    Common String Methods
+        • split()
+        • join()
+        • replace()
+        • strip()
+
+    Regular Expressions for Pattern Matching
+        • Using the re Module
+        • Common Functions
+            • re.search(pattern, string)
+            • re.findall(pattern, string)
+            • re.sub(pattern, replacement, string)
+
+FILE HANDLING
+
+    Reading and Writing Text Files
+        • Opening Files
+            • Use the built-in open() function to open a file
+                • r | w | a | r+
+        • Reading Files
+            • .read() | .readline() | .readlines()
+        • Writing to Files
+            • .write() | .writelines()
+
+    Using ‘with’ Statements for File Management
+        • Ensures files are properly closed after operations, even if an exception occurs
+        • Advantages
+            • Simplifies code
+            • Reduces the risk of file corruption
+
+    Basic Exception Handling for File Operations
+        • Prevents the program from crashing due to file-related errors(e.g., file not found)
+        • Using try- except Blocks
+        • Common File Handling Exceptions
+            • FileNotFoundError
+            • PermissionError
+            • IOError
+
+PYTHONIC CODE
+
+    Writing Clean, “Pythonic” Code
+        • Use descriptive variable names
+        • Write modular code with functions and classes
+        • Follow PEP 8 style guidelines
+        • Avoid redundancy; leverage Python’s powerful built-ins
+
+    List Comprehensions
+        • A concise way to create lists using a single line of code
+
+    Lambda Functions
+        • Anonymous, single-expression functions defined using the lambda keyword
+        
+    map(), filter(), and reduce()
+        • map()
+            • Applies a function to each item in an iterable
+        • filter()
+            • Filters items based on a condition
+        • reduce()
+            • Reduces an iterable to a single value
+
+    Python’s os and sys Modules
+        • os Module
+            • Provides functions to interact with the operating system
+        • sys Module
+            • Provides access to system-specific parameters and functions
+
+    
