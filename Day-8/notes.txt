@@ -2,11 +2,13 @@
 
     Importance of Feature Engineering in Machine Learning
         • Process of transforming raw data into meaningful inputs for machine learning models
+        
         • Why is Feature Engineering Important?
             • Improves Model Accuracy
             • Reduces Model Complexity
             • Enables Model Interpretability
             • Handles Data Challenges
+        
         • Key Applications
             • Finance | Healthcare | E-Commerce
 
@@ -59,6 +61,7 @@
 
     What is Scaling and Normalization?
         • Preprocessing techniques used to transform numerical features to a common range or distribution
+        
         • Why is Scaling and Normalization Important?
             • Improves Algorithm Performance
             • Ensures Fair Comparisons
@@ -66,6 +69,7 @@
 
 
     Methods: Min-Max Scaling, Standardization (Z-Score Scaling)
+        
         • Min-Max Scaling
             • Transforms features to a specified range, typically [0, 1]
             • Ensures all feature values are within the same range
@@ -103,9 +107,11 @@
 
 
     One-Hot Encoding, Label Encoding
+        
         • What Are Categorical Variables?
             • Binary Categorical Features: Gender (Male/Female)
             • Multi-Class Categorical Features: Country (USA, Canada, UK).
+        
         • One-Hot Encoding
             • Creates binary columns for each category in a categorical feature
             • Each row is marked with a 1 for its respective category and 0 elsewhere
@@ -130,9 +136,11 @@
     
     Dealing with High-Cardinality Categorical Features
         • High-cardinality categorical features contain a large number of unique categories
+        
         • Challenges
             • Dimensionality
             • Sparse Representation
+        
         • Solutions
             • Frequency Encoding
                 • Replace categories with their occurrence frequency in the dataset
@@ -156,4 +164,36 @@
 
 
 
-    
+    Introduction to Feature Selection
+
+        • What is Feature Selection?
+            • Process of identifying and retaining the most relevant features (input variables) in a dataset while discarding irrelevant or redundant ones
+        
+        • Why is Feature Selection Important?
+            • Improves Model Performance
+            • Reduces Overfitting
+            • Enhances Interpretability
+            • Increases Computational Efficiency
+        
+        • When to Use Feature Selection?
+            • High-Dimensional Data
+            • Correlated Features
+            • Reducing Complexity
+
+
+    Techniques for Feature Selection
+
+        • Filter Methods
+            • Evaluate the relevance of features by analyzing their statistical properties in relation to the target variable
+            • Examples: Correlation | Mutual Information
+            • When to Use: Quick evaluation of features before training a model
+        
+        • Wrapper Methods
+            • Iteratively selects features by training and evaluating a model
+            • Examples: Forward Selection | Backward Elimination
+            • When to Use: Useful when feature interactions are important but computationally expensive
+        
+        • Embedded Methods
+            • Perform feature selection as part of the model training process
+            • Examples: Lasso Regression | Tree-Based Models
+            • When to Use: Effective when training tree-based models or regularized regression
