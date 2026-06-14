@@ -1,6 +1,5 @@
 * ENSEMBLE LEARNING *
 
-
     Concept of Ensemble Learning
 
         • What is Ensemble Learning?
@@ -58,10 +57,7 @@
 
 
 
-
 * BAGGING AND RANDOM FORESTS *
-
-
 
     Understanding Bagging (Bootstrap Aggregating)
         
@@ -116,13 +112,7 @@
 
 
 
-
-
-
 * BOOSTING AND GRADIENT BOOSTING *
-
-
-
 
     Concept of Boosting
         
@@ -187,13 +177,7 @@
                 • Shallower trees generalize better but might underfit.
 
 
-
-
-
-
 * XGBOOST *
-
-
 
     Overview of XGBoost
         
@@ -250,3 +234,59 @@
                 • Typical range: 0.5–1.0
             
             • Regularization Parameters: lambda and alpha control L2 and L1 regularization, respectively
+
+
+* LIGHTGBM AND CATBOOST *
+
+    Introduction to LightGBM
+        
+        • What is LightGBM?
+            • Implementation of Gradient Boosting designed to handle large datasets and high-dimensional data with speed and accuracy
+        
+        • Key Features of LightGBM:
+            • Histogram-Based Splitting
+            • Leaf-Wise Tree Growth
+            • Support for GPU Training
+            • Handling Sparse Data
+        
+        • Advantages
+            • Faster training than XGBoost
+            • Handles large datasets effectively
+            • Reduces memory usage with histogram-based splitting
+        
+        • When to Use LightGBM
+            • Large datasets with numerical features
+            • Time-sensitive tasks requiring fast training
+
+    
+    Overview of CatBoost
+        
+        • What is CatBoost?
+            • Gradient Boosting library developed specifically to handle categorical features without the need for preprocessing like one-hot encoding
+        
+        • Key Features of CatBoost:
+            • Native Support for Categorical Data
+            • Ordered Boosting
+            • Robust to Overfitting
+        
+        • Advantages
+            • Eliminates the need for manual encoding of categorical data
+            • Reduces overfitting with robust boosting techniques
+            • Easy to implement for datasets with many categorical features
+        
+        • When to Use CatBoost
+            • Datasets with a high proportion of categorical features
+            • Applications where overfitting is a concern
+
+
+    XGBoost Vs LightGBM Vs CatBoost
+
+            Feature                         XGBoost                     LightGBM                    CatBoost
+
+            Speed                           Moderate                    Fast                        Fast
+            Handling categorical data       Requires encoding           Requires encoding           Native Support
+            Memory usage                    Moderate                    Low                         Moderate
+            Tuning complexity               Moderate                    High(leaf wise growth)      Low
+            Best Use Cases                  General purpose models      Large datasets              Categorical heavy datasets
+
+            
